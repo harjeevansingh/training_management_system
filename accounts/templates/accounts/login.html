@@ -35,10 +35,13 @@
 <body>
  <div class="container-fluid">
 	<p id="response"></p>
+
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('{% static 'css_files/login/images/bg-01.jpg' %}');" style="padding-top:20px">
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" id="login" method="post">
+               {% csrf_token %}
+
 					<span class="login100-form-logo">
 						<i class="zmdi zmdi-landscape"></i>
 					</span>

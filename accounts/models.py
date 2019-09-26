@@ -6,6 +6,9 @@ class Account(models.Model):
     email = models.EmailField()
     password = models.CharField(max_length=200)
 
+    def __str__(self):
+        return self.email
+
 
 '''class CompanyAccount(models.Model):
     company_name = models.CharField(max_length=300)
