@@ -34,3 +34,18 @@ class Project(models.Model):
     def __str__(self):
         return self.project_name
 
+
+class WorkUpdates(models.Model):
+    student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
+    training_id = models.ForeignKey(Training, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    description = models.TextField(max_length=500)
+    date = models.DateField()
+
+    def title(self):
+        return self.description[0:75]
+
+    def __str__(self):
+        return self.name
+
+
