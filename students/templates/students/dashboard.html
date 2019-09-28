@@ -7,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
+    {% load staticfiles %}
 <title>Ultra Modern an Admin Panel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,32 +15,32 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Bootstrap Core CSS -->
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="{% static 'css_files/student_dashboard/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="{% static 'css_files/student_dashboard/css/style.css' %}" rel='stylesheet' type='text/css' />
 <!-- font CSS -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet">
+<link href="{% static 'css_files/student_dashboard/css/font-awesome.css' %}" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!--skycons-icons-->
-<script src="js/skycons.js"></script>
+<script src="{% static 'css_files/student_dashboard/js/skycons.js' %}"></script>
 <!--//skycons-icons-->
 
  <!-- js-->
-  <script src="js/bootstrap.js"></script>
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/modernizr.custom.js"></script>
+  <script src="{% static 'css_files/student_dashboard/js/bootstrap.js' %}"></script>
+<script src="{% static 'css_files/student_dashboard/js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'css_files/student_dashboard/js/modernizr.custom.js' %}"></script>
 <!--webfonts-->
-<link href='//fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Muli:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
 <!--//webfonts-->
 <!-- Metis Menu -->
-<script src="js/metisMenu.min.js"></script>
-<script src="js/custom.js"></script>
-<link href="css/custom.css" rel="stylesheet">
+<script src="{% static 'css_files/student_dashboard/js/metisMenu.min.js' %}"></script>
+<script src="{% static 'css_files/student_dashboard/js/custom.js' %}"></script>
+<link href="{% static 'css_files/student_dashboard/css/custom.css' %}" rel="stylesheet">
 <!--//Metis Menu -->
-<link href="css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script src="js/jquery.sparkline.min.js"></script>
+<link href="{% static 'css_files/student_dashboard/css/jquerysctipttop.css' %}" rel="stylesheet" type="text/css">
+<script src="{% static 'css_files/student_dashboard/js/jquery.sparkline.min.js' %}"></script>
 <script type="text/javascript">
     /* <![CDATA[ */
     $(function() {
@@ -60,10 +61,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     });
     /* ]]> */
     </script>
-	<script src="js/Chart.js"></script>
+	<script src="{% static 'css_files/student_dashboard/js/Chart.js' %}"></script>
 
 <!--pie-chart--->
-<script src="js/pie-chart.js" type="text/javascript"></script>
+<script src="{% static 'css_files/student_dashboard/js/pie-chart.js' %}" type="text/javascript"></script>
  <script type="text/javascript">
 
         $(document).ready(function () {
@@ -102,11 +103,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 
     </script>
 	<!--Calender-->
-<link rel="stylesheet" href="css/clndr.css" type="text/css" />
-<script src="js/underscore-min.js" type="text/javascript"></script>
-<script src= "js/moment-2.2.1.js" type="text/javascript"></script>
-<script src="js/clndr.js" type="text/javascript"></script>
-<script src="js/site.js" type="text/javascript"></script>
+<link rel="stylesheet" href="{% static 'css_files/student_dashboard/css/clndr.css' %}" type="text/css" />
+<script src="{% static 'css_files/student_dashboard/js/underscore-min.js' %}" type="text/javascript"></script>
+<script src= "{% static 'css_files/student_dashboard/js/moment-2.2.1.js' %}" type="text/javascript"></script>
+<script src="{% static 'css_files/student_dashboard/js/clndr.js' %}" type="text/javascript"></script>
+<script src="{% static 'css_files/student_dashboard/js/site.js' %}" type="text/javascript"></script>
 <!--End Calender-->
 </head>
 <body class="cbp-spmenu-push">
@@ -220,7 +221,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 			<div class="header-left">
 				<!--logo -->
 				<div class="logo">
-					<a href="index.html"><h1>Ultra Modern</h1></a>
+					<a href="index.html"><h1>BBSBEC</h1></a>
 				</div>
 				<!--//logo-->
 				<div class="user-right">
@@ -230,7 +231,9 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<li class="dropdown profile_details_drop">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 										<div class="profile_img">
-											<span class="prfil-img"><img src="images/a.png" alt=""> </span>
+											<span class="prfil-img">
+                                                <img src="{% static 'css_files/student_dashboard/images/a.png'%}" alt="">
+                                           </span>
 											<div class="clearfix"></div>
 										</div>
 									</a>
@@ -257,7 +260,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</li>
 							<li><a href="#">
-								 <div class="user_img"><img src="images/1.png" alt=""></div>
+								 <div class="user_img"><img src="{% static 'css_files/student_dashboard/images/1.png' %}" alt=""></div>
 								 <div class="notification_desc">
 									<p>Lorem ipsum dolor amet</p>
 									<p><span>1 hour ago</span></p>
@@ -265,7 +268,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								 <div class="clearfix"></div>
 								</a></li>
 								<li class="odd"><a href="#">
-								<div class="user_img"><img src="images/2.png" alt=""></div>
+								<div class="user_img"><img src="{% static 'css_files/student_dashboard/images/2.png' %}" alt=""></div>
 								<div class="notification_desc">
 									<p>Lorem ipsum dolor amet </p>
 									<p><span>1 hour ago</span></p>
@@ -273,7 +276,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"></div>
 								</a></li>
 								<li><a href="#">
-								<div class="user_img"><img src="images/3.png" alt=""></div>
+								<div class="user_img"><img src="{% static 'css_files/student_dashboard/images/3.png' %}" alt=""></div>
 								<div class="notification_desc">
 									<p>Lorem ipsum dolor amet </p>
 									<p><span>1 hour ago</span></p>
@@ -296,7 +299,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</li>
 								<li><a href="#">
-								<div class="user_img"><img src="images/2.png" alt=""></div>
+								<div class="user_img"><img src="{% static 'css_files/student_dashboard/images/2.png' %}" alt=""></div>
 									<div class="notification_desc">
 										<p>Lorem ipsum dolor amet</p>
 										<p><span>1 hour ago</span></p>
@@ -304,7 +307,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									  <div class="clearfix"></div>
 								</a></li>
 								<li class="odd"><a href="#">
-									<div class="user_img"><img src="images/1.png" alt=""></div>
+									<div class="user_img"><img src="{% static 'css_files/student_dashboard/images/1.png' %}" alt=""></div>
 									 <div class="notification_desc">
 										<p>Lorem ipsum dolor amet </p>
 										<p><span>1 hour ago</span></p>
@@ -312,7 +315,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 									<div class="clearfix"></div>
 								</a></li>
 								<li><a href="#">
-									<div class="user_img"><img src="images/3.png" alt=""></div>
+									<div class="user_img"><img src="{% static 'css_files/student_dashboard/images/3.png' %}" alt=""></div>
 									 <div class="notification_desc">
 										<p>Lorem ipsum dolor amet </p>
 										<p><span>1 hour ago</span></p>
@@ -401,483 +404,93 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</div>
 
 
-               <div class="mail-toolbar clearfix">
-			     <div class="float-left">
-			        <div class="btn btn_1 btn-default mrg5R">
-			           <i class="fa fa-refresh"> </i>
-			        </div>
-			        <div class="dropdown">
-			            <a href="#" title="" class="btn btn-default" data-toggle="dropdown" aria-expanded="false">
-			                <i class="fa fa-cog icon_8"></i>
-			                <i class="fa fa-chevron-down icon_8"></i>
-			            <div class="ripple-wrapper"></div></a>
-			            <ul class="dropdown-menu float-right">
-			                <li>
-			                    <a href="#" title="">
-			                        <i class="fa fa-pencil-square-o icon_9"></i>
-			                        Edit
-			                    </a>
-			                </li>
-			                <li>
-			                    <a href="#" title="">
-			                        <i class="fa fa-calendar icon_9"></i>
-			                        Schedule
-			                    </a>
-			                </li>
-			                <li>
-			                    <a href="#" title="">
-			                        <i class="fa fa-download icon_9"></i>
-			                        Download
-			                    </a>
-			                </li>
-			                <li class="divider"></li>
-			                <li>
-			                    <a href="#" class="font-red" title="">
-			                        <i class="fa fa-times" icon_9=""></i>
-			                        Delete
-			                    </a>
-			                </li>
-			            </ul>
-			        </div>
-			        <div class="clearfix"> </div>
-			    </div>
-			    <div class="float-right">
 
 
-                            <span class="text-muted m-r-sm">Showing 20 of 346 </span>
-                            <div class="btn-group m-r-sm mail-hidden-options" style="display: inline-block;">
-                                <div class="btn-group">
-                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-folder"></i> <span class="caret"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                        <li><a href="#">Social</a></li>
-                                        <li><a href="#">Forums</a></li>
-                                        <li><a href="#">Updates</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Spam</a></li>
-                                        <li><a href="#">Trash</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">New</a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group">
-                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tags"></i> <span class="caret"></span></a>
-                                    <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                        <li><a href="#">Work</a></li>
-                                        <li><a href="#">Family</a></li>
-                                        <li><a href="#">Social</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Primary</a></li>
-                                        <li><a href="#">Promotions</a></li>
-                                        <li><a href="#">Forums</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="btn-group">
-                                <a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
-                                <a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
-                            </div>
-
-
-			    </div>
                </div>
-                <table class="table">
-                    <tbody>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Google
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                12 march
-                            </td>
-                        </tr>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                            	<input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                02 march
-                            </td>
-                        </tr>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Adobe
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                8 march
-                            </td>
-                        </tr>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Apple
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                4 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Microsoft
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                1 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Microsoft
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                15 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Microsoft
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                16 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Microsoft
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                9 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Microsoft
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                16 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                10 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                14 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                11 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                20 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                           <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                25 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Twitter
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                26 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Twitter
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                            </td>
-                            <td>
-                                28 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star icon-state-warning"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Twitter
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                06 march
-                            </td>
-                        </tr>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Twitter
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                8 march
-                            </td>
-                        </tr>
-                        <tr class="unread checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                10 march
-                            </td>
-                        </tr>
-                        <tr class="read checked">
-                            <td class="hidden-xs">
-                                <input type="checkbox" class="checkbox">
-                            </td>
-                            <td class="hidden-xs">
-                                <i class="fa fa-star"></i>
-                            </td>
-                            <td class="hidden-xs">
-                                Dropbox
-                            </td>
-                            <td>
-                                Nullam quis risus eget urna mollis ornare vel eu leo
-                            </td>
-                            <td>
-                                <i class="fa fa-paperclip"></i>
-                            </td>
-                            <td>
-                                16 march
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+                <div class="four-grids">
+
+					<table class="table table-hover">
+						<thead>
+							<tr>
+							  <th>Date</th>
+							  <th>Title</th>
+							  <th>Description</th>
+								<th>Age</th>
+							  <th>Start Date</th>
+							    <th>Salary</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							  <td>Nash</td>
+							  <td>Software Engineer</td>
+							  <td>London</td>
+							  <td>35</td>
+							  <td>2011/05/03</td>
+							   <td>$163,500.00</td>
+							</tr>
+							<tr>
+							  <td>Ashton </td>
+							  <td>Accountant</td>
+							  <td>Tokyo</td>
+							   <td>45</td>
+							  <td>2008/11/28</td>
+							   <td>$132,000.00</td>
+							</tr>
+							<tr>
+							  <td>Lael </td>
+							  <td>Support Lead	</td>
+							  <td>Edinburgh	</td>
+							   <td>35</td>
+							  <td>2005/11/28</td>
+							   <td>$182,000.00</td>
+							</tr>
+							<tr>
+							  <td>Stevens </td>
+							  <td>Sales Assistant</td>
+							  <td>New York	</td>
+							   <td>30</td>
+							  <td>2008/11/28</td>
+							   <td>$182,000.00</td>
+							</tr>
+							<tr>
+							  <td>Gavin </td>
+							  <td>Team Leader	</td>
+							  <td>London	</td>
+							   <td>21</td>
+							  <td>2008/11/28</td>
+							   <td>$235,500.00</td>
+							</tr>
+							<tr>
+							  <td>Garrett </td>
+							  <td>Customer Support	</td>
+							  <td>New York	</td>
+							   <td>27</td>
+							  <td>2008/11/28</td>
+							   <td>$112,000.00</td>
+							</tr>
+							<tr>
+							  <td>Zenaida </td>
+							  <td>Data Coordinator	</td>
+							  <td>San Francisco	</td>
+							   <td>36</td>
+							  <td>2008/11/28</td>
+							   <td>$122,000.00</td>
+							</tr>
+							<tr>
+							  <td>Michael </td>
+							  <td>	Director</td>
+							  <td>Singapore	</td>
+							   <td>40</td>
+							  <td>2008/11/25</td>
+							   <td>$192,000.00</td>
+							</tr>
+						</tbody>
+					</table>
+                    <div class="clearfix"></div>
+
+                </div>
 
 
 
@@ -936,7 +549,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 			<!-- Classie -->
-				<script src="js/classie.js"></script>
+				<script src="{% static 'css_files/student_dashboard/js/classie.js' %}"></script>
 				<script>
 					var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
 						showLeftPush = document.getElementById( 'showLeftPush' ),
@@ -958,11 +571,11 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
 				</script>
 			<!-- Bootstrap Core JavaScript --> 
 				
-				<script type="text/javascript" src="js/bootstrap.min.js"></script>
+				<script type="text/javascript" src="{% static 'css_files/student_dashboard/js/bootstrap.min.js' %}"></script>
 				<!--scrolling js-->
-				<script src="js/jquery.nicescroll.js"></script>
-				<script src="js/scripts.js"></script>
-				<link href="css/bootstrap.min.css" rel="stylesheet">
+				<script src="{% static 'css_files/student_dashboard/js/jquery.nicescroll.js' %}"></script>
+				<script src="{% static 'css_files/student_dashboard/js/scripts.js' %}"></script>
+				<link href="#" rel="stylesheet">
 
 				<!--//scrolling js-->
 				<div class="modal fade" id="myModal1" tabindex="-1" role="dialog">

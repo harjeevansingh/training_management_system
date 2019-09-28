@@ -10,8 +10,9 @@ def login(request):
             return redirect('home')
 
         else:
-            return render(request, 'accounts/login.html', {'error': str(type(user))})
+            return render(request, 'accounts/login.html', {'error': "Email or password invalid!"})
 
     else:
         return render(request, 'accounts/login.html')
+
 
