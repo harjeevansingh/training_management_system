@@ -35,10 +35,9 @@
 <body>
  <div class="container-fluid">
 
-	<div class="limiter">
 		<div class="container-login100" style="background-image: url('{% static 'css_files/login/images/bg-01.jpg' %}'); padding-top:20px">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="{% url 'login' %}" id="login" method="POST">
+                <form method="POST" action="{% url 'signup' %}">
                {% csrf_token %}
 
 					<span class="login100-form-logo icon">
@@ -46,7 +45,7 @@
 					</span>
 
 					<span class="login100-form-title p-b-34 p-t-27">
-						Log in
+						Register
 					</span>
 
                     {% if error %}
@@ -55,18 +54,18 @@
                     {% endif %}
 
 
-					<div class="wrap-input100 validate-input" data-validate = "Enter email">
-						<input class="input100" type="text" name="username" placeholder="Email" required>
+					<div class="wrap-input100 ">
+						<input class="input100" type="text" name="username" placeholder="Email">
 						<span class="focus-input100" data-placeholder="&#xf207;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<input class="input100" type="password" name="password1" placeholder="Password" required>
+					<div class="wrap-input100">
+						<input class="input100" type="password" name="password1" placeholder="Password" r>
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
                     <div class="wrap-input100 " >
-						<input class="input100" type="password" name="password2" placeholder="Confirm Password" required>
+						<input class="input100" type="password" name="password2" placeholder="Confirm Password">
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
@@ -80,7 +79,6 @@
 
 				</form>
 			</div>
-		</div>
 	</div>
 
 

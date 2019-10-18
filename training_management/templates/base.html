@@ -39,7 +39,7 @@
   <body>
     <header>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">Training Cell BBSBEC</a>
+    <a class="navbar-brand" href="{% url 'home' %}">Training Cell BBSBEC</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,13 +56,24 @@
         </li>
       </ul>
 
-            <li class="nav-item">
-          <a class="nav-link" href="{% url 'login' %}">Login</a>
-        </li>
+        {% if user.is_authenticated %}
 
-      <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
-        </li>
+            <a class="nav-item nav-link" href="javascript:{document.getElementById('logout').submit()}" onclick="">Logout </a>
+                    <form id="logout" method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <input type="hidden">
+                    </form>
+
+        {% else %}
+            <li class="nav-item">
+                 <a class="nav-link" href="{% url 'login' %}">Login</a>
+            </li>
+
+            <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signup' %}">Register</a>
+            </li>
+
+        {% endif %}
     </div>
   </nav>
 </header>

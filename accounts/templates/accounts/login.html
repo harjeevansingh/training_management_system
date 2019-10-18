@@ -1,26 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
 
 
-    {% if error %}
-        {{ error }}
-        <br>
-        <br>
-    {% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+	<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'css_files/login/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css_files/login/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+ <div class="container-fluid">
+	<p id="response"></p>
+
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('{% static 'css_files/login/images/bg-01.jpg' %}'); padding-top:20px">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" action="{% url 'login' %}" id="login" method="POST">
+               {% csrf_token %}
+
+					<span class="login100-form-logo icon">
+						<i class="zmdi zmdi-account"></i>
+					</span>
+
+					<span class="login100-form-title p-b-34 p-t-27">
+						Log in
+					</span>
+
+                    {% if error %}
+                        {{ error }}
+                        <br><br>
+                    {% endif %}
 
 
-    <h1>Login</h1>
+					<div class="wrap-input100 validate-input" data-validate = "Enter email">
+						<input class="input100" type="text" name="email" placeholder="Email" required>
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
 
-    <form method="POST" action="{% url 'login' %}">
-    {% csrf_token %}
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="password" placeholder="Password" required>
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+					</div>
 
-    email:
-    <br>
-    <input type="text" name="email"/>
-    <br>
-    Password:
-    <br>
-    <input type="password" name="password"/>
-    <br>
-    <br>
-    <input class="btn btn-primary" type="submit" value="Login"/>
-    </form>
+					<
+					<div class="container-login100-form-btn">
+                       <input class="btn btn-primary" type="submit" value="Login" style="background-color: #4A4747"/>
 
+						<!-- <button type="submit" class="login100-form-btn">Login</button> -->
+					</div>
+
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'css_files/login/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'css_files/login/vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'css_files/login/js/main.js' %}"></script>
+ </div>
+</body>
+</html>
+
+
+{% endblock %}
