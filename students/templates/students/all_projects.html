@@ -257,59 +257,36 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                </div>
 
             <div class="jumbotron-fluid" style="padding: 3%; text-align: center; font-weight: 700; font-size: 3rem">
-            Daily Class Updates
+            Projects
             </div>
                 <div class="four-grids">
 
 					<table class="table table-hover">
 						<thead>
 							<tr>
-							  <th style="font-size: 20px">Date</th>
-							  <th style="font-size: 20px">Title</th>
+							  <th style="font-size: 20px">Project Name</th>
 							  <th style="font-size: 20px">Description</th>
+							  <th style="font-size: 20px">Start Date</th>
+							  <th style="font-size: 20px">End Date</th>
 							</tr>
 						</thead>
 						<tbody>
+
+                        {% for project in projects.all %}
+                            {% if project.student_id == user %}
+
 							<tr>
-							  <td>12/2/19</td>
-							  <td>Python Lists</td>
-							  <td>In Python programming, a list is created by placing all the items (elements) inside a square bracket [ ], separated by commas.</td>
+
+							  <td>{{ project.project_name }}</td>
+							  <td>{{ project.summary }}</td>
+							  <td>{{ project.start_date }}</td>
+							  <td>{{ project.end_date }}</td>
 							</tr>
-							<tr>
-							  <td>13/2/19</td>
-							  <td>Strings</td>
-							  <td>Strings in Python are arrays of bytes representing unicode characters.</td>
-							</tr>
-							<tr>
-							  <td>15/2/19</td>
-							  <td> Functions</td>
-							  <td> A function is a set of statements that take inputs, do some specific computation and produces output.	</td>
-							</tr>
-							<tr>
-							  <td>19/2/19</td>
-							  <td>Explicit Functions</td>
-							  <td>The idea is to put some commonly or repeatedly done task together and make a function.</td>
-							</tr>
-							<tr>
-							  <td>21/2/19</td>
-							  <td>Classes</td>
-							  <td>Python Classes and Methods Python is an “object-oriented programming language.	</td>
-							</tr>
-							<tr>
-							  <td>22/2/19</td>
-							  <td>Operators	</td>
-							  <td>Arithmetic operators. Assignment operators. Comparison operators. Logical operators. Identity operators. Membership operators. Bitwise operators.</td>
-							</tr>
-							<tr>
-							  <td>25/2/19</td>
-							  <td>Exception Handling</td>
-							  <td>Python script encounters a situation that it cannot cope with, it raises an exception.	</td>
-							</tr>
-							<tr>
-							  <td>29/2/19</td>
-							  <td>File Handling</td>
-							  <td>Python too supports file handling and allows users to handle files i.e., to read and write files, along with many other file handling options.	</td>
-							</tr>
+
+                            {% endif %}
+
+                        {% endfor %}
+
 						</tbody>
 					</table>
                     <div class="clearfix"></div>

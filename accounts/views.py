@@ -25,7 +25,7 @@ def login(request):
         user = auth.authenticate(username=request.POST['email'], password=request.POST['password'])
         if user is not None:
             auth.login(request, user)
-            return redirect('home')
+            return redirect('student_dashboard')
 
         else:
             return render(request, 'accounts/login.html', {'error': "Email or password invalid!"})

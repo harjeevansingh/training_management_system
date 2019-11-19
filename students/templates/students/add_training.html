@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+        {% load staticfiles %}
+		<meta charset="utf-8">
+		<title>RegistrationForm_v5 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{% static 'css_files/add_training/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css_files/add_training/css/style.css' %}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{% url 'add_training' %}" method="POST" >
+                    {% csrf_token %}
+					<h3>Add new Training</h3>
+
+					<div class="form-wrapper">
+						<label for="" class="label-input">Company Name</label>
+						<input type="text" class="form-control" name="company_name">
+					</div>
+					<div class="form-wrapper">
+						<label for="" class="label-input">Role</label>
+						<input type="text" class="form-control" name="role">
+					</div>
+					<div class="form-wrapper">
+						<label for="" class="label-input">Place</label>
+						<input type="text" class="form-control" name="place">
+					</div>
+
+
+                    <div class="form-wrapper">
+						<label for="" class="label-input">Start Date</label>
+						<input type="date" class="form-control" name="start_date">
+					</div>
+
+                    <div class="form-wrapper">
+						<label for="" class="label-input">End Date</label>
+						<input type="date" class="form-control" name="end_date">
+					</div>
+
+
+					<div class="form-wrapper">
+						<label for="" class="label-comment">Description</label>
+						<textarea name="description" class="form-control" style="height: 69px"></textarea>
+					</div>
+					<button>Add Training</button>
+				</form>
+				<div class="image-holder">
+					<img src="{% static 'training_icon.jpg' %}" alt="" height="550">
+				</div>
+			</div>
+		</div>
+
+		<script src="{% static 'css_files/add_training/js/jquery-3.3.1.min.js' %}"></script>
+		<script src="{% static 'css_files/add_training/js/main.js' %}"></script>
+	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+{% endblock %}
